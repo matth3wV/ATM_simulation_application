@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ATM_simulation_application.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ATM_simulation_application;
 
@@ -11,7 +12,6 @@ internal class AccountContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseMySQL(connectionString, ServerVersion.AutoDetect(connectionString)); //May need pomelo
         optionsBuilder.UseMySQL(connectionString);
     }
 }
